@@ -32,15 +32,15 @@ endfunc
 "添加python文件头
 autocmd BufNewFile *.py exec ":call SetPythonTitle()"
 func SetPythonTitle()
-	call setline(1,"\#########################################################################") 
-	call append(line("."), "\# File Name: ".expand("%")) 
-	call append(line(".")+1, "\# Author: yuhaitao") 
-	call append(line(".")+2, "\# mail: acer_yuhaitao@163.com") 
-	call append(line(".")+3, "\# Created Time: ".strftime("%c")) 
-	call append(line(".")+4, "\#########################################################################") 
-	call append(line(".")+5, "\#!/usr/bin/python") 
-	call append(line(".")+6,"#-*- coding: utf-8 -*-")
-	call append(line(".")+7," ")
+	call setline(1,"\#!/usr/bin/python") 
+	call append(line("."), "\# -*- coding: UTF-8 -*-")
+	call append(line(".")+1,"\#########################################################################") 
+	call append(line(".")+2, "\# File Name: ".expand("%")) 
+	call append(line(".")+3, "\# Author: yuhaitao") 
+	call append(line(".")+4, "\# mail: acer_yuhaitao@163.com") 
+	call append(line(".")+5, "\# Created Time: ".strftime("%c")) 
+	call append(line(".")+6, "\#########################################################################") 
+	call append(line(".")+7, " ")
 endfunc
 
 "设置ctags
